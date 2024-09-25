@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Pengecek Kata Palindrom</title>
+</head>
+<body>
+    <script>
+        alert ("Aplikasi Pengecek Kata Palindrom\n" + "\nNama Anugrah Setiawan" + "\nNIM H233600429");
+
+        let kataPalindrom = prompt ("Cek Kata Palindrom :");
+
+        function cekPalindrom(kata) {
+            const cleanedInput = kata.toLowerCase().replace(/[^a-z0-9]/g, '');
+            const reversedInput = cleanedInput.split('').reverse().join('');
+
+            if (cleanedInput === reversedInput){
+                return `${kata} Adalah Palindrom`;
+            } else {
+                return `${kata} Bukan Palindrom`;
+            }
+        }
+
+        alert(cekPalindrom(kataPalindrom));
+
+    </script>
+</body>
+</html>
