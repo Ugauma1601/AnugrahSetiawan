@@ -24,6 +24,18 @@
 
         alert(cekPalindrom(kataPalindrom));
 
+        let continueChecking = true;
+
+        while (continueChecking) {
+            let kataPalindrom = prompt("Cek Kata Palindrom (Ketik 'stop' Untuk Berhenti):");
+
+            if (kataPalindrom.toLowerCase() === 'stop') {       
+                continueChecking = false;
+                alert("Terima Kasih Sudah Menggunakan Aplikasi Ini.");
+            } else {
+                alert(cekPalindrom(kataPalindrom));
+            }
+        }
     </script>
 </body>
 </html>
